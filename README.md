@@ -113,3 +113,26 @@ git push origin master
 
   ![](/home/cyx/Desktop/Learning/gitLearn/img/选区_029.png)
 
+#### 5. 代码已被push
+
+​	方法1: 撤销指定文件到指定版本
+
+~~~bash
+# 查看某文件的提交版本
+git log <fileName>
+# 找到文件想要回滚的版本号
+git checkout <commitId> <fileName> 
+# 按照正常方法提交即可
+git add .
+git commit -m 'test'
+git push origin master
+~~~
+
+​	方法2: 删除最后一次远程提交
+
+~~~bash
+# 取消上一次的commit
+git reset --hard HEAD~1
+git push orgin master -f
+~~~
+
