@@ -1,4 +1,4 @@
-# Git学习笔记
+#  Git学习笔记
 
 ### 1. git 仓库的常用操作
 
@@ -70,4 +70,46 @@ git push origin master
 [李刚的git撤销回退笔记](https://blog.csdn.net/ligang2585116/article/details/71094887)
 
 #### 1. 模拟代码提交过程
+
+**场景一： 没有git add 的情况**
+
+![没有add情况](/home/cyx/Desktop/Learning/gitLearn/img/选区_018.png)
+
++ 解决方法： git check out
+
+![](/home/cyx/Desktop/Learning/gitLearn/img/选区_019.png)
+
+#### 2. 代码已add
+
+![](/home/cyx/Desktop/Learning/gitLearn/img/选区_021.png)
+
++ 解决方法: git reset HEAD [文件名]
+
+![](/home/cyx/Desktop/Learning/gitLearn/img/选区_022.png)
+
+#### 4. 代码已经commit
+
+![](/home/cyx/Desktop/Learning/gitLearn/img/选区_022.png)
+
++ 查看git log
+
+![](/home/cyx/Desktop/Learning/gitLearn/img/选区_024.png)
+
++ 解决方案: git reset 
+
+  + git reset --mixed HEAD~1: 撤销上一次git commit 操作, 并撤销git add
+  + git reset --soft HEAD~1: 撤销上一次git commit 操作, 并不撤销git add 操作
+  + git reset --hard HEAD~1: 恢复到上一次commit操作, **不保存本次修改的代码！！！**
+
++ git reset --mixed
+
+  ![](/home/cyx/Desktop/Learning/gitLearn/img/选区_027.png)
+
++ git reset --soft
+
+  ![](/home/cyx/Desktop/Learning/gitLearn/img/选区_028.png)
+
++ git reset --hard
+
+  ![](/home/cyx/Desktop/Learning/gitLearn/img/选区_029.png)
 
