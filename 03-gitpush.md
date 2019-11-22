@@ -1,2 +1,2 @@
 git push test
-git push 2
+new push
